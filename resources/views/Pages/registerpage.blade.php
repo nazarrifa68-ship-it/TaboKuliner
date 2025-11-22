@@ -15,7 +15,7 @@
                 <h1>Membuat Akun</h1>
                 <p class="welcome-text">
                     Jika kamu sudah pernah membuat akun, maka kamu bisa melakukannya dengan cara 
-                    <a href="/login" class="login-link">Klik Disini</a>
+                    <a href="{{ route('loginpage') }}" class="login-link">Klik Disini</a>
                 </p>
 
                 <form class="register-form" action="/register" method="POST">

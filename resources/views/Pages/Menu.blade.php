@@ -1,42 +1,14 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu - Tabo Kuliner</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{asset('css/Menu.css')}}">
-    <style>
-        
-    </style>
-</head>
-<body>
-    <div class="leaf-left">🌿</div>
-  <div class="leaf-right">🌿</div>
-    <!-- Navbar -->
-    <nav class="navbar">
-        <div class="logo">
-            <img src="image/LOGO.png" alt="Logo Tabo Kuliner">
-            <span>Tabo Kuliner</span>
-        </div>
+@extends('layout.main')
 
-        <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+@section('title', 'Menu - TaboKuliner')
 
-        <ul class="nav-links" id="nav-links">
-            <li><a href="/">Home</a></li>
-            <li><a href="#" class="active">Menu</a></li>
-            <li><a href="/About">About Tabo</a></li>
-            <li><a href="/Contact">Contact</a></li>
-        </ul>
+@section('css')
+<link rel="stylesheet" href="{{asset('css/Menu.css')}}">
+@endsection
 
-        <div class="auth-buttons">
-            <a style="text-decoration: none" href="/Login" class="btn login">Login</a>
-            <a style="text-decoration: none" href="/Register" class="btn register">Register</a>
-        </div>
-    </nav>
+@section('content')
 
-    <!-- Special Menu Section -->
-    <section class="special-menu">
+<section class="special-menu">
         <div class="container">
             <h2>SPECIAL MENU</h2>
             <p class="subtitle">Dari ribuan kekayaan rasa, berikut adalah hidangan-hidangan yang paling dicari dan wajib Anda coba</p>
@@ -283,58 +255,5 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="tabo-footer">
-        <div class="footer-container">
-            <div class="footer-col">
-                <div class="logo-wrapper">
-                    <img src="image/SURALOGOPUTIH.png" alt="Logo Tabo Kuliner" class="logo-image">
-                    <h3 class="footer-title">Tabo Kuliner</h3>
-                </div>
-                <p>Sajikan kehangatan rempah dan kekayaan tradisi Sumatera Utara di meja makan Anda</p>
-            </div>
+@endsection
 
-            <div class="footer-col">
-                <h3 class="footer-title">Hubungi Kami</h3>
-                <p>Email: Tabokuliner@gmail.com</p>
-                <p>No Telp : +6287802466375</p>
-            </div>
-
-            <div class="footer-col">
-                <h3 class="footer-title">Alamat</h3>
-                <p>Jl. Perbanas, RT.6/RW.7, Kuningan, Karet Kuningan, Kecamatan Setiabudi, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12940</p>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        // Mobile menu toggle
-        const toggle = document.getElementById('menu-toggle');
-        const navLinks = document.getElementById('nav-links');
-        toggle.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
-
-        // Pagination dots interactivity
-        document.querySelectorAll('.pagination').forEach(pagination => {
-            const dots = pagination.querySelectorAll('.dot');
-            dots.forEach((dot, index) => {
-                dot.addEventListener('click', () => {
-                    dots.forEach(d => d.classList.remove('active'));
-                    dot.classList.add('active');
-                });
-            });
-        });
-
-        // Button click feedback
-        document.querySelectorAll('.add-btn, .order-btn, .price-btn').forEach(btn => {
-            btn.addEventListener('click', function() {
-                this.style.transform = 'scale(0.95)';
-                setTimeout(() => {
-                    this.style.transform = '';
-                }, 150);
-            });
-        });
-    </script>
-</body>
-</html>
