@@ -29,6 +29,12 @@ h2 {
     background: linear-gradient(to bottom, #ffffff, #faf6f0);
 }
 
+/* Regular Food Section */
+.regular-food {
+    background: white;
+}
+
+/* Menu Grid - Sama untuk semua section */
 .menu-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -36,11 +42,12 @@ h2 {
     margin-bottom: 40px;
 }
 
+/* Menu Card - Unified Style */
 .menu-card {
     background: white;
+    border: 1px solid #e5e7eb;
     border-radius: 20px;
     padding: 30px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
 }
 
@@ -72,49 +79,6 @@ h2 {
     font-size: 1.3rem;
     margin-bottom: 15px;
     color: #1a1a1a;
-}
-
-.menu-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.price {
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: #BE8B34;
-}
-
-.add-btn {
-    background: #BE8B34;
-    color: white;
-    border: none;
-    padding: 12px;
-    border-radius: 12px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-size: 1.2rem;
-    width: 45px;
-    height: 45px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.add-btn:hover {
-    background: #a67828;
-    transform: scale(1.1);
-}
-
-/* Regular Food Section */
-.regular-food {
-    background: white;
-}
-
-.regular-card {
-    background: white;
-    border: 1px solid #e5e7eb;
 }
 
 .calories {
@@ -240,8 +204,6 @@ h2 {
     color: #6b7280;
     font-size: 1rem;
 }
-
-
 
 /* Decorative Leaves */
 .leaf-left {

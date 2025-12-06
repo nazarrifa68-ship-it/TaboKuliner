@@ -58,6 +58,7 @@ body {
 .auth-buttons {
     display: flex;
     gap: 1rem;
+    align-items: center;
 }
 
 .btn {
@@ -67,6 +68,8 @@ body {
     cursor: pointer;
     font-weight: 600;
     transition: all 0.3s;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
 }
 
 .btn.login {
@@ -89,42 +92,194 @@ body {
     background: #a67828;
 }
 
+/* Dashboard Button (Admin) */
+.btn.dashboard {
+    background: #BE8B34;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.btn.dashboard:hover {
+    background: #a67828;
+}
+
+.btn.dashboard svg {
+    stroke: white;
+}
+
+/* Logout Button */
+.btn.logout {
+    background: #dc3545;
+    color: white;
+}
+
+.btn.logout:hover {
+    background: #c82333;
+}
+
+/* Cart Button */
+.btn.cart {
+    background: #BE8B34;
+    color: white;
+    position: relative;
+    padding: 0.6rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn.cart:hover {
+    background: #a67828;
+}
+
+.cart-badge {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: #dc3545;
+    color: white;
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+/* User Profile Dropdown */
+.user-dropdown {
+    position: relative;
+}
+
+.btn.user-profile {
+    background: white;
+    border: 2px solid #BE8B34;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0.5rem 1rem;
+}
+
+.btn.user-profile:hover {
+    background: #f8f8f8;
+}
+
+.btn.user-profile img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.btn.user-profile span {
+    max-width: 120px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    min-width: 220px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.dropdown-menu.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 20px;
+    color: #333;
+    text-decoration: none;
+    transition: background 0.2s;
+    font-size: 0.9rem;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+}
+
+.dropdown-item:first-child {
+    border-radius: 8px 8px 0 0;
+}
+
+.dropdown-item:last-child {
+    border-radius: 0 0 8px 8px;
+}
+
+.dropdown-item:hover {
+    background: #f8f8f8;
+}
+
+.dropdown-item svg {
+    flex-shrink: 0;
+}
+
+.dropdown-divider {
+    height: 1px;
+    background: #e0e0e0;
+    margin: 5px 0;
+}
+
+.logout-item {
+    color: #dc3545;
+}
+
+.logout-item:hover {
+    background: #fff5f5;
+}
+
 .menu-toggle {
     display: none;
     font-size: 1.5rem;
     cursor: pointer;
 }
 
-
 /* Styling untuk Footer */
 .tabo-footer {
     background-color: #1a1a1a;
-    /* Latar belakang hitam/abu-abu gelap */
     color: #ffffff;
-    /* Warna teks putih */
     padding: 40px 20px;
     font-family: Arial, sans-serif;
 }
 
-/* Container yang mengatur 3 kolom menjadi sejajar */
 .footer-container {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     gap: 30px;
-
-    /* Penting: Menjaga semua kolom sejajar di bagian atas (top alignment) */
     align-items: flex-start;
 }
 
 .footer-col {
     flex: 1;
-    /* Setiap kolom mengambil ruang yang sama */
     padding: 0 10px;
 }
 
-/* Judul Kolom (Hubungi Kami, Alamat) */
 .footer-title {
     font-size: 18px;
     font-weight: bold;
@@ -133,7 +288,6 @@ body {
     color: #ffffff;
 }
 
-/* Teks dan Paragraf */
 .footer-col p {
     font-size: 14px;
     line-height: 1.6;
@@ -141,25 +295,20 @@ body {
     font-weight: 300;
 }
 
-/* Styling Khusus untuk Kolom Logo (Kolom 1) */
 .logo-wrapper {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
 }
 
-/* Judul 'Tabo Kuliner' */
 .logo-wrapper .footer-title {
     margin-bottom: 0;
     font-size: 22px;
-    /* Dibuat sedikit lebih besar agar sebanding dengan logo 50px */
     font-weight: 500;
 }
 
-/* Styling untuk gambar logo */
 .logo-image {
     height: 45px;
-    /* Tinggi logo 50px sesuai permintaan Anda */
     width: auto;
     margin-right: 8px;
 }
@@ -221,8 +370,14 @@ body {
     }
     
     .footer-container {
-        flex-direction: column; /* Ubah ke tumpukan vertikal di layar kecil */
+        flex-direction: column;
     }
 
+    .btn.user-profile span {
+        display: none;
+    }
 
+    .btn.user-profile {
+        padding: 0.5rem;
+    }
 }

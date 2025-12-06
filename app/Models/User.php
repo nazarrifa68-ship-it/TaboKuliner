@@ -2,47 +2,61 @@
 
 namespace App\Models;
 
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticatable
 {
-    /** @use HasFactory<\Database\Factories\UserFactory> */
-    use HasFactory, Notifiable;
+    use Notifiable;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var list<string>
-     */
     protected $fillable = [
         'name',
         'email',
+        'phone',
         'password',
+        'role',
+        'profile_photo',
     ];
 
-    /**
-     * The attributes that should be hidden for serialization.
-     *
-     * @var list<string>
-     */
     protected $hidden = [
         'password',
         'remember_token',
     ];
 
+    protected $casts = [
+        'email_verified_at' => 'datetime',
+        'password' => 'hashed',
+    ];
+
     /**
-     * Get the attributes that should be cast.
-     *
-     * @return array<string, string>
+     * Check if user is admin
      */
-    protected function casts(): array
+    public function isAdmin(): bool
     {
-        return [
-            'email_verified_at' => 'datetime',
-            'password' => 'hashed',
-        ];
+        return $this->role === 'admin';
+    }
+
+    /**
+     * Check if user is customer
+     */
+    public function isCustomer(): bool
+    {
+        return $this->role === 'customer';
+    }
+
+    /**
+     * Relasi ke Addresses
+     */
+    public function addresses()
+    {
+        return $this->hasMany(Address::class);
+    }
+
+    /**
+     * Get default address
+     */
+    public function defaultAddress()
+    {
+        return $this->hasOne(Address::class)->where('is_default', true);
     }
 }

@@ -6,6 +6,37 @@
     <title>Register - Tabo Kuliner</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{asset('css/Register.css')}}">
+    <style>
+        /* Alert Messages */
+        .alert {
+            padding: 15px 20px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .alert-danger {
+            background-color: #fee;
+            border: 1px solid #fcc;
+            color: #c33;
+        }
+
+        .alert-success {
+            background-color: #efe;
+            border: 1px solid #cfc;
+            color: #3c3;
+        }
+
+        .alert ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        .alert li {
+            margin: 5px 0;
+        }
+    </style>
 </head>
 <body>
     <div class="register-container">
@@ -15,10 +46,30 @@
                 <h1>Membuat Akun</h1>
                 <p class="welcome-text">
                     Jika kamu sudah pernah membuat akun, maka kamu bisa melakukannya dengan cara 
-                    <a href="{{ route('loginpage') }}" class="login-link">Klik Disini</a>
+                    <a href="{{ route('loginpage') }}" class="login-link">Klik Disini</a>
                 </p>
 
-                <form class="register-form" action="/register" method="POST">
+                <form class="register-form" action="{{ route('register') }}" method="POST">
+                    @csrf
+                    
+                    <!-- Error Messages -->
+                    @if ($errors->any())
+                        <div class="alert alert-danger">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
+
+                    <!-- Success Message -->
+                    @if (session('success'))
+                        <div class="alert alert-success">
+                            {{ session('success') }}
+                        </div>
+                    @endif
+
                     <!-- Name Input -->
                     <div class="input-group">
                         <div class="input-icon">
@@ -27,7 +78,11 @@
                                 <circle cx="12" cy="7" r="4"></circle>
                             </svg>
                         </div>
-                        <input type="text" name="name" placeholder="Masukkan Nama" required>
+                        <input type="text" 
+                               name="name" 
+                               placeholder="Masukkan Nama Lengkap" 
+                               value="{{ old('name') }}" 
+                               required>
                     </div>
 
                     <!-- Email Input -->
@@ -38,7 +93,11 @@
                                 <polyline points="22,6 12,13 2,6"></polyline>
                             </svg>
                         </div>
-                        <input type="email" name="email" placeholder="Masukkan Email" required>
+                        <input type="email" 
+                               name="email" 
+                               placeholder="Masukkan Email" 
+                               value="{{ old('email') }}" 
+                               required>
                     </div>
 
                     <!-- Password Input -->
@@ -49,11 +108,14 @@
                                 <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
                             </svg>
                         </div>
-                        <input type="password" name="password" placeholder="Password" required>
+                        <input type="password" 
+                               name="password" 
+                               placeholder="Password (Minimal 8 karakter)" 
+                               required>
                     </div>
 
                     <!-- Register Button -->
-                    <button type="submit" class="btn-register">MASUK</button>
+                    <button type="submit" class="btn-register">DAFTAR</button>
                 </form>
 
                 <!-- Divider -->
@@ -63,12 +125,12 @@
 
                 <!-- Social Login Buttons -->
                 <div class="social-login">
-                    <button class="btn-social btn-google">
+                    <button class="btn-social btn-google" type="button">
                         <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google">
                         <span>Masuk dengan <strong>google</strong></span>
                     </button>
 
-                    <button class="btn-social btn-facebook">
+                    <button class="btn-social btn-facebook" type="button">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="#1877F2">
                             <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
                         </svg>

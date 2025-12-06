@@ -19,17 +19,17 @@
 
   <section class="feature-section">
   <div class="feature-card">
-    <img src="Icons/Rempahpilihan.svg" alt="Rempah Pilihan">
+    <img src="{{asset('Icons/Rempahpilihan.svg')}}" alt= "Rempah Pilihan">
     <h3>REMPAH PILIHAN</h3>
   </div>
 
   <div class="feature-card">
-    <img src="Icons/Resepleluhur.svg" alt="Resep Leluhur">
+    <img src="{{asset('Icons/Resepleluhur.svg')}} "alt="Resep Leluhur">
     <h3>RESEP LELUHUR</h3>
   </div>
 
   <div class="feature-card">
-    <img src="Icons/Bahanberkualitas.svg" alt="Bahan Berkualitas">
+    <img src="{{asset('Icons/Bahanberkualitas.svg')}}" alt="Bahan Berkualitas">
     <h3>BAHAN BERKUALITAS</h3>
   </div>
 </section>
@@ -44,22 +44,22 @@
 
         <div class="menu-grid">
             <div class="menu-item">
-                <img src="image/img_menu/Soto_medan.png" alt="Menu 1">
+                <img src="{{asset('image/img_menu/Soto_medan.png')}}" alt="Menu 1">
             </div>
             <div class="menu-item">
-                <img src="image/img_menu/Saksang.jpg" alt="Menu 2">
+                <img src="{{asset('image/img_menu/Saksang.jpg')}}" alt="Menu 2">
             </div>
             <div class="menu-item">
-                <img src="image/img_menu/Arsik_Ikan_Mas.png" alt="Menu 3">
+                <img src="{{asset('image/img_menu/Arsik_Ikan_Mas.png')}}" alt="Menu 3">
             </div>
             <div class="menu-item">
-                <img src="image/img_menu/Soto_Bebek_Medan.png" alt="Menu 4">
+                <img src="{{asset('image/img_menu/Soto_Bebek_Medan.png')}}" alt="Menu 4">
             </div>
             <div class="menu-item">
-                <img src="image/img_menu/Naniura.png" alt="Menu 5">
+                <img src="{{asset('image/img_menu/Naniura.png')}}" alt="Menu 5">
             </div>
            <div class="menu-item">
-                <img src="image/img_menu/Bika_Ambon.png" alt="Menu 6">
+                <img src="{{asset('image/img_menu/Bika_Ambon.png')}}" alt="Menu 6">
             </div>
         </div>
 

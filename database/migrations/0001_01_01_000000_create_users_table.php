@@ -15,8 +15,11 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('email')->unique();
+            $table->string('phone', 20)->nullable();  // ← TAMBAHKAN INI
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->enum('role', ['admin', 'customer'])->default('customer');  // ← TAMBAHKAN INI
+            $table->string('profile_photo')->nullable();  // ← TAMBAHKAN INI
             $table->rememberToken();
             $table->timestamps();
         });

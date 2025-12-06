@@ -14,69 +14,117 @@
             <p class="subtitle">Dari ribuan kekayaan rasa, berikut adalah hidangan-hidangan yang paling dicari dan wajib Anda coba</p>
             
             <div class="menu-grid">
-                <div class="menu-card">
+                <div class="menu-card regular-card">
                     <div class="menu-image">
                         <img src="image/img_menu/Soto_medan.png" alt="Soto Medan">
                     </div>
                     <h3>Soto Medan</h3>
-                    <div class="menu-footer">
-                        <span class="price">Rp 25.000</span>
-                        <button class="add-btn">+</button>
+                    <p class="calories">280 Kcal</p>
+                    <div class="regular-footer">
+                        <button class="price-btn">Rp 25.000</button>
+                        <button class="order-btn">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="9" cy="21" r="1"></circle>
+                                <circle cx="20" cy="21" r="1"></circle>
+                                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                            </svg>
+                            Order
+                        </button>
                     </div>
                 </div>
 
-                <div class="menu-card">
+                <div class="menu-card regular-card">
                     <div class="menu-image">
                         <img src="image/img_menu/Saksang.jpg" alt="Saksang">
                     </div>
                     <h3>Saksang</h3>
-                    <div class="menu-footer">
-                        <span class="price">Rp 35.000</span>
-                        <button class="add-btn">+</button>
+                    <p class="calories">320 Kcal</p>
+                    <div class="regular-footer">
+                        <button class="price-btn">Rp 35.000</button>
+                        <button class="order-btn">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="9" cy="21" r="1"></circle>
+                                <circle cx="20" cy="21" r="1"></circle>
+                                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                            </svg>
+                            Order
+                        </button>
                     </div>
                 </div>
 
-                <div class="menu-card">
+                <div class="menu-card regular-card">
                     <div class="menu-image">
                         <img src="image/img_menu/Arsik_Ikan_Mas.png" alt="Arsik Ikan Mas">
                     </div>
                     <h3>Arsik Ikan Mas</h3>
-                    <div class="menu-footer">
-                        <span class="price">Rp 45.000</span>
-                        <button class="add-btn">+</button>
+                    <p class="calories">350 Kcal</p>
+                    <div class="regular-footer">
+                        <button class="price-btn">Rp 45.000</button>
+                        <button class="order-btn">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="9" cy="21" r="1"></circle>
+                                <circle cx="20" cy="21" r="1"></circle>
+                                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                            </svg>
+                            Order
+                        </button>
                     </div>
                 </div>
 
-                <div class="menu-card">
+                <div class="menu-card regular-card">
                     <div class="menu-image">
                         <img src="image/img_menu/Soto_Bebek_Medan.png" alt="Soto Bebek Medan">
                     </div>
                     <h3>Soto Bebek Medan</h3>
-                    <div class="menu-footer">
-                        <span class="price">Rp 30.000</span>
-                        <button class="add-btn">+</button>
+                    <p class="calories">300 Kcal</p>
+                    <div class="regular-footer">
+                        <button class="price-btn">Rp 30.000</button>
+                        <button class="order-btn">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="9" cy="21" r="1"></circle>
+                                <circle cx="20" cy="21" r="1"></circle>
+                                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                            </svg>
+                            Order
+                        </button>
                     </div>
                 </div>
 
-                <div class="menu-card">
+                <div class="menu-card regular-card">
                     <div class="menu-image">
                         <img src="image/img_menu/Naniura.png" alt="Naniura">
                     </div>
                     <h3>Naniura</h3>
-                    <div class="menu-footer">
-                        <span class="price">Rp 40.000</span>
-                        <button class="add-btn">+</button>
+                    <p class="calories">250 Kcal</p>
+                    <div class="regular-footer">
+                        <button class="price-btn">Rp 40.000</button>
+                        <button class="order-btn">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="9" cy="21" r="1"></circle>
+                                <circle cx="20" cy="21" r="1"></circle>
+                                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                            </svg>
+                            Order
+                        </button>
                     </div>
                 </div>
 
-                <div class="menu-card">
+                <div class="menu-card regular-card">
                     <div class="menu-image">
                         <img src="image/img_menu/Bika_Ambon.png" alt="Bika Ambon">
                     </div>
                     <h3>Bika Ambon</h3>
-                    <div class="menu-footer">
-                        <span class="price">Rp 20.000</span>
-                        <button class="add-btn">+</button>
+                    <p class="calories">180 Kcal</p>
+                    <div class="regular-footer">
+                        <button class="price-btn">Rp 20.000</button>
+                        <button class="order-btn">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="9" cy="21" r="1"></circle>
+                                <circle cx="20" cy="21" r="1"></circle>
+                                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                            </svg>
+                            Order
+                        </button>
                     </div>
                 </div>
             </div>
@@ -257,3 +305,6 @@
 
 @endsection
 
+@section('js')
+<script src="{{asset('js/menu.js')}}"></script>
+@endsection

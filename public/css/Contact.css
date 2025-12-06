@@ -8,7 +8,7 @@
     background: url('https://images.unsplash.com/photo-1495195134817-aeb325a55b65?w=1600&h=900&fit=crop') center/cover;
     color: white;
     padding: 0 5%;
-    margin-top: 70px;
+  
 }
 
 .hero-overlay {
@@ -151,7 +151,7 @@
         @media (max-width: 768px) {
         .contact-hero {
         height: 50vh;
-        margin-top: 60px;
+        
     }
 
     .hero-content h1 {
