@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\CartController;
+use App\Http\Controllers\MenuController;
 
 /*
 |--------------------------------------------------------------------------
@@ -41,10 +43,10 @@ Route::post('/Logout', [AuthController::class, 'logout'])->name("logout")->middl
 */
 
 Route::middleware(['auth', 'customer'])->group(function () {
-    // Menu
-    Route::get('/Menu', function () {
-        return view('Pages.Menu');
-    })->name("Menu");
+    // Menu Routes
+    Route::get('/Menu', [MenuController::class, 'index'])->name('Menu');
+    Route::get('/Menu/{slug}', [MenuController::class, 'show'])->name('Menu.show');
+    Route::get('/category/{slug}', [MenuController::class, 'byCategory'])->name('Menu.category');
     
     // Profile
     Route::get('/Profile', [ProfileController::class, 'index'])->name('profile');
@@ -56,6 +58,17 @@ Route::middleware(['auth', 'customer'])->group(function () {
     Route::post('/Profile/address/add', [ProfileController::class, 'addAddress'])->name('address.add');
     Route::post('/Profile/address/{id}/set-default', [ProfileController::class, 'setDefaultAddress'])->name('address.set-default');
     Route::delete('/Profile/address/{id}', [ProfileController::class, 'deleteAddress'])->name('address.delete');
+
+        // Cart Routes
+    Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
+    Route::post('/cart/add', [CartController::class, 'add'])->name('cart.add');
+    Route::post('/cart/update', [CartController::class, 'update'])->name('cart.update');
+    Route::delete('/cart/remove/{id}', [CartController::class, 'remove'])->name('cart.remove');
+    Route::post('/cart/clear', [CartController::class, 'clear'])->name('cart.clear');
+    Route::get('/checkout', [CartController::class, 'checkout'])->name('cart.checkout');
+    Route::post('/checkout/process', [CartController::class, 'processCheckout'])->name('cart.processCheckout');
+
+
 });
 
 /*

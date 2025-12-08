@@ -39,13 +39,19 @@
                 </form>
             @else
                 {{-- Tampil jika LOGIN SEBAGAI CUSTOMER --}}
-                <a style="text-decoration: none" href="#" class="btn cart">
+                <a style="text-decoration: none" href="{{ route('cart.index') }}" class="btn cart">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align: middle;">
                         <circle cx="9" cy="21" r="1"></circle>
                         <circle cx="20" cy="21" r="1"></circle>
                         <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
                     </svg>
-                    <span class="cart-badge">0</span>
+                     @php
+                        $cartCount = session('cart') ? count(session('cart')) : 0;
+                    @endphp
+                    @if($cartCount > 0)
+                    <span class="cart-badge">{{ $cartCount }}</span>
+                    @endif
+                   
                 </a>
                 
                 <div class="user-dropdown">
