@@ -115,26 +115,26 @@
         <div class="chef-grid">
             <div class="chef-card">
                 <div class="chef-image">
-                    <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=400&h=400&fit=crop" alt="Chef Batak">
+                   <img src="{{asset('image/img_menu/Chef_j.jpeg')}}" alt="Chef Jasson">
                 </div>
-                <h3>Chef Batak</h3>
-                <p class="chef-specialty">Masakan Batak Traditional</p>
+                <h3>Chef Jasson</h3>
+                <p class="chef-specialty">Masakan Cemilan</p>
             </div>
 
             <div class="chef-card">
                 <div class="chef-image">
-                    <img src="https://images.unsplash.com/photo-1581299894007-aaa50297cf16?w=400&h=400&fit=crop" alt="Chef Medan">
+                  <img src="{{asset('image/img_menu/Chef_m.jpeg')}}" alt="Chef Minji">
                 </div>
-                <h3>Chef Medan</h3>
-                <p class="chef-specialty">Kuliner Medan Authentic</p>
+                <h3>Chef Minji</h3>
+                <p class="chef-specialty">Kuliner Medan</p>
             </div>
 
             <div class="chef-card">
                 <div class="chef-image">
-                    <img src="https://images.unsplash.com/photo-1583394293214-28ded15ee548?w=400&h=400&fit=crop" alt="Chef Nusantara">
+                   <img src="{{asset('image/img_menu/Chef_n.jpeg')}}" alt="Chef Nazar">
                 </div>
-                <h3>Chef Nusantara</h3>
-                <p class="chef-specialty">Indonesian Cuisine</p>
+                <h3>Chef Nazar</h3>
+                <p class="chef-specialty">Kuliner Medan</p>
             </div>
         </div>
     </div>
