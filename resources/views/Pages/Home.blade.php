@@ -68,7 +68,7 @@
         </p>
 
         <div class="hero-image">
-            <img src="https://images.unsplash.com/photo-1555244162-803834f70033?w=1200&h=500&fit=crop" alt="Dining Experience">
+             <img src="{{asset('image/img_menu/ketring.png')}}" alt="Dining Experience">
         </div>
     </div>
 
