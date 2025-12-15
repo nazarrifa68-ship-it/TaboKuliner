@@ -5,6 +5,10 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\MenuController;
+use App\Http\Controllers\ReviewController;
+use App\Http\Controllers\OrderController;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -59,14 +63,18 @@ Route::middleware(['auth', 'customer'])->group(function () {
     Route::post('/Profile/address/{id}/set-default', [ProfileController::class, 'setDefaultAddress'])->name('address.set-default');
     Route::delete('/Profile/address/{id}', [ProfileController::class, 'deleteAddress'])->name('address.delete');
 
-        // Cart Routes
-    Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
+    // Cart Routes
+    Route::get('/cart', [CartController::class, 'index'])->name('cart.index'); 
     Route::post('/cart/add', [CartController::class, 'add'])->name('cart.add');
     Route::post('/cart/update', [CartController::class, 'update'])->name('cart.update');
     Route::delete('/cart/remove/{id}', [CartController::class, 'remove'])->name('cart.remove');
     Route::post('/cart/clear', [CartController::class, 'clear'])->name('cart.clear');
     Route::get('/checkout', [CartController::class, 'checkout'])->name('cart.checkout');
     Route::post('/checkout/process', [CartController::class, 'processCheckout'])->name('cart.processCheckout');
+
+    /// Order Routes
+Route::get('/order/success/{orderId}', [OrderController::class, 'success'])->name('order.success');
+Route::post('/order/{orderId}/review', [OrderController::class, 'submitReview'])->name('order.review');
 
 
 });

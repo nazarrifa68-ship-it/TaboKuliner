@@ -146,4 +146,8 @@ class Order extends Model
             }
         });
     }
+    public function review()
+{
+    return $this->hasOne(Review::class);
+}
 }

@@ -17,14 +17,15 @@ class MenuSeeder extends Seeder
             ['category_id' => 1, 'name' => 'Arsik Ikan Mas', 'price' => 45000, 'calories' => 350, 'is_special' => true, 'image' => 'image/img_menu/Arsik_Ikan_Mas.png'],
             ['category_id' => 1, 'name' => 'Soto Bebek Medan', 'price' => 30000, 'calories' => 300, 'is_special' => true, 'image' => 'image/img_menu/Soto_Bebek_Medan.png'],
             ['category_id' => 1, 'name' => 'Naniura', 'price' => 40000, 'calories' => 250, 'is_special' => true, 'image' => 'image/img_menu/Naniura.png'],
+            ['category_id' => 1, 'name' => 'Mie Gomak', 'price' => 15000, 'calories' => 250, 'is_special' => true, 'image' => 'image/img_menu/MieGomak.png'],
             
             // Cemilan
-            ['category_id' => 4, 'name' => 'Bika Ambon', 'price' => 500000, 'calories' => 250, 'is_special' => true, 'image' => 'image/img_menu/Bika_Ambon.png'],
-            ['category_id' => 4, 'name' => 'Lappet', 'price' => 28000, 'calories' => 150, 'is_special' => true, 'image' => 'image/img_menu/Bika_Ambon.png'],
-            ['category_id' => 4, 'name' => 'Ombus-ombus', 'price' => 15000, 'calories' => 200, 'is_special' => true, 'image' => 'image/img_menu/Bika_Ambon.png'],
-            ['category_id' => 4, 'name' => 'Dolung-dolung', 'price' => 20000, 'calories' => 300, 'is_special' => true, 'image' => 'image/img_menu/Bika_Ambon.png'],
-            ['category_id' => 4, 'name' => 'Sasagun', 'price' => 10000, 'calories' => 100, 'is_special' => true, 'image' => 'image/img_menu/Bika_Ambon.png'],
-            ['category_id' => 4, 'name' => 'Uyen Talas', 'price' => 30000, 'calories' => 175, 'is_special' => true, 'image' => 'image/img_menu/Bika_Ambon.png'],
+            ['category_id' => 2, 'name' => 'Bika Ambon', 'price' => 500000, 'calories' => 250, 'is_special' => false, 'image' => 'image/img_menu/Bika_Ambon.png'],
+            ['category_id' => 2, 'name' => 'Lappet', 'price' => 28000, 'calories' => 150, 'is_special' => false, 'image' => 'image/img_menu/Lappet.png'],
+            ['category_id' => 2, 'name' => 'Ombus-ombus', 'price' => 15000, 'calories' => 200, 'is_special' => false, 'image' => 'image/img_menu/Ombus-ombus.png'],
+            ['category_id' => 2, 'name' => 'Dolung-dolung', 'price' => 20000, 'calories' => 300, 'is_special' => false, 'image' => 'image/img_menu/Dolung-Dolung.png'],
+            ['category_id' => 2, 'name' => 'Sasagun', 'price' => 10000, 'calories' => 100, 'is_special' => false, 'image' => 'image/img_menu/Sasagun.png'],
+            ['category_id' => 2, 'name' => 'Uyen Talas', 'price' => 30000, 'calories' => 175, 'is_special' => false, 'image' => 'image/img_menu/UyenTalas.png'],
         ];
 
         foreach ($menus as $menu) {

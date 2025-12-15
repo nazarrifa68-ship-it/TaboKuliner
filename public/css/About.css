@@ -5,7 +5,7 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    background: url('https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=1600&h=900&fit=crop') center/cover;
+    background: url(../image/img_menu/herohd1.png);
     color: white;
     padding: 0 5%;
 }
@@ -69,11 +69,11 @@
 }
 
 .visi-card {
-    background-image: url('https://images.unsplash.com/photo-1600298881974-6be191ceeda1?w=800&h=600&fit=crop');
+    background-image: url(../image/img_menu/suasana-sumut.png);
 }
 
 .misi-card {
-    background-image: url('https://images.unsplash.com/photo-1604357209793-fca5dca89f97?w=800&h=600&fit=crop');
+    background-image: url(../image/img_menu/suasana-kultur2.png);
 }
 
 .content-overlay {

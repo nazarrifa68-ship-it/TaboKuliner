@@ -10,7 +10,7 @@ class MenuController extends Controller
 {
     public function index()
     {
-        // Get special menus (menu unggulan)
+        // Get MAKANAN (menu unggulan)
         $specialMenus = Menu::with('category')
             ->where('is_special', true)
             ->where('is_available', true)

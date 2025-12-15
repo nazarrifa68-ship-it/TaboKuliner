@@ -52,7 +52,7 @@
 }
 
 .section-card h2 svg {
-    color: #667eea;
+    color: #ff9900;
 }
 
 /* Address Section */
@@ -65,7 +65,7 @@
     display: inline-block;
     margin-top: 15px;
     padding: 12px 30px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #ff9900 0%, #955900 100%);
     color: white;
     text-decoration: none;
     border-radius: 8px;
@@ -89,7 +89,7 @@
 }
 
 .address-option:hover {
-    border-color: #667eea;
+    border-color: #ff9900;
     background: #f8f9ff;
 }
 
@@ -98,11 +98,11 @@
 }
 
 .address-option input[type="radio"]:checked + .address-content {
-    color: #667eea;
+    color: #ff9900;
 }
 
 .address-option:has(input:checked) {
-    border-color: #667eea;
+    border-color: #ff9900;
     background: #f8f9ff;
 }
 
@@ -132,7 +132,7 @@
 
 .badge-default {
     padding: 3px 10px;
-    background: #667eea;
+    background: #ff9900;
     color: white;
     border-radius: 12px;
     font-size: 12px;
@@ -193,7 +193,7 @@
 }
 
 .item-total strong {
-    color: #667eea;
+    color: #ff9900;
     font-size: 18px;
 }
 
@@ -215,7 +215,7 @@
 }
 
 .payment-option:hover {
-    border-color: #667eea;
+    border-color: #ff9900;
     background: #f8f9ff;
 }
 
@@ -224,7 +224,7 @@
 }
 
 .payment-option:has(input:checked) {
-    border-color: #667eea;
+    border-color: #ff9900;
     background: #f8f9ff;
 }
 
@@ -235,7 +235,7 @@
 }
 
 .payment-content svg {
-    color: #667eea;
+    color: #ff9900;
     flex-shrink: 0;
 }
 
@@ -264,7 +264,7 @@
 
 .section-card textarea:focus {
     outline: none;
-    border-color: #667eea;
+    border-color: #ff9900;
 }
 
 /* Summary Card */
@@ -303,13 +303,13 @@
 }
 
 .total-amount {
-    color: #667eea !important;
+    color: #ff9900 !important;
 }
 
 .btn-place-order {
     width: 100%;
     padding: 18px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #ff9900 0%, #9d5e00 100%);
     color: white;
     border: none;
     border-radius: 12px;

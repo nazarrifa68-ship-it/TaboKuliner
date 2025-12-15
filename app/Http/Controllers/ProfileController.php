@@ -132,7 +132,7 @@ class ProfileController extends Controller
     {
         $validator = Validator::make($request->all(), [
             'label' => 'required|string|max:50',
-            'address' => 'required|string',
+            'full_address' => 'required|string',
             'city' => 'required|string|max:100',
             'postal_code' => 'required|string|max:10',
             'phone' => 'required|string|max:20',
@@ -157,8 +157,9 @@ class ProfileController extends Controller
 
         Address::create([
             'user_id' => $user->id,
+            'recipient_name' => $request->recipient_name, // INI PENTING
             'label' => $request->label,
-            'address' => $request->address,
+            'full_address' => $request->full_address,
             'city' => $request->city,
             'postal_code' => $request->postal_code,
             'phone' => $request->phone,

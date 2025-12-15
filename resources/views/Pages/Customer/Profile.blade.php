@@ -202,6 +202,12 @@
         <form action="{{ route('address.add') }}" method="POST">
             @csrf
             <div class="modal-body">
+
+                <div class="form-group">
+                    <label>Nama Penerima *</label>
+                    <input type="text" name="recipient_name"" required>
+                </div>
+
                 <div class="form-group">
                     <label>Label Alamat *</label>
                     <input type="text" name="label" placeholder="Rumah, Kantor, Apartemen, dll" required>
@@ -209,7 +215,7 @@
 
                 <div class="form-group">
                     <label>Alamat Lengkap *</label>
-                    <textarea name="address" rows="3" placeholder="Nama jalan, nomor rumah, RT/RW" required></textarea>
+                    <textarea name="full_address" rows="3" placeholder="Nama jalan, nomor rumah, RT/RW" required></textarea>
                 </div>
 
                 <div class="form-row">

@@ -23,18 +23,7 @@ class CategorySeeder extends Seeder
                 'description' => 'Camilan dan makanan ringan tradisional',
                 'is_active' => true
             ],
-            [
-                'name' => 'Minuman',
-                'slug' => 'minuman',
-                'description' => 'Minuman segar dan tradisional',
-                'is_active' => true
-            ],
-            [
-                'name' => 'Dessert',
-                'slug' => 'dessert',
-                'description' => 'Makanan penutup khas Medan',
-                'is_active' => true
-            ]
+            
         ];
 
         foreach ($categories as $category) {

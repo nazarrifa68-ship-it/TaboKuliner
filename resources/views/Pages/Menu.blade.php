@@ -11,7 +11,7 @@
 <!-- Special Menu Section -->
 <section class="special-menu">
     <div class="container">
-        <h2>SPECIAL MENU</h2>
+        <h2>MAKANAN</h2>
         <p class="subtitle">Dari ribuan kekayaan rasa, berikut adalah hidangan-hidangan yang paling dicari dan wajib Anda coba</p>
         
         @if($specialMenus->isEmpty())
@@ -60,8 +60,8 @@
 <!-- Regular Food Section -->
 <section class="regular-food">
     <div class="container">
-        <h2>OUR REGULAR FOOD</h2>
-        <p class="subtitle">Hidangan reguler kami yang selalu tersedia setiap hari dengan cita rasa yang konsisten</p>
+        <h2>CAMILAN</h2>
+        <p class="subtitle">Nikmati gigitan manis, gurih, dan pedas dari aneka cemilan legendaris Sumatera Utara, sempurna untuk menemani waktu santai Anda.</p>
         
         @if($regularMenus->isEmpty())
         <div class="empty-menu">

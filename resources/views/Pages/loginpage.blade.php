@@ -115,7 +115,7 @@
         <!-- Right Side - Image -->
         <div class="login-right">
             <div class="circle-image">
-                <img src="{{asset('image/login-image.jpg')}}" alt="Sumatera Culture">
+                <img src="{{asset('image/login-image.png')}}" alt="Sumatera Culture">
             </div>
         </div>
     </div>

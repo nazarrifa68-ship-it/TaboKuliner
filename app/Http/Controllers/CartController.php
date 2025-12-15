@@ -145,7 +145,7 @@ class CartController extends Controller
         return view('Pages.Customer.checkout', compact('cart', 'subtotal', 'shipping', 'serviceFee', 'total', 'addresses', 'defaultAddress'));
     }
 
-   public function processCheckout(Request $request)
+public function processCheckout(Request $request)
 {
     $request->validate([
         'address_id' => 'required|exists:addresses,id',
@@ -187,7 +187,7 @@ class CartController extends Controller
         foreach ($cart as $id => $item) {
             OrderItem::create([
                 'order_id' => $order->id,
-                'menu_id' => $item['menu_id'] ?? null, // Use menu_id if available
+                'menu_id' => $item['menu_id'] ?? null,
                 'menu_name' => $item['name'],
                 'menu_image' => $item['image'],
                 'quantity' => $item['quantity'],
@@ -201,8 +201,8 @@ class CartController extends Controller
 
         DB::commit();
 
-        return redirect()->route('orders.show', $order->id)
-            ->with('success', 'Pesanan berhasil dibuat! Silakan lakukan pembayaran.');
+        // Redirect ke halaman sukses
+        return redirect()->route('order.success', $order->id);
 
     } catch (\Exception $e) {
         DB::rollback();
